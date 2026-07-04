@@ -629,12 +629,17 @@
     }
     .compare-detail { font-size: 0.78rem; color: var(--clr-text-muted); }
 
-    /* ===== VIDEO TESTIMONIALS ===== */
-    #testimonials { background: var(--clr-bg); }
-    .video-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px; margin-top: 56px;
+   #testimonials {
+      background: var(--clr-bg);
     }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 56px;
+    }
+
     .video-card {
       background: var(--clr-white);
       border-radius: var(--radius-md);
@@ -642,46 +647,42 @@
       border: 1px solid rgba(22,58,99,0.07);
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
-      display: block;
     }
+
     .video-card:hover {
       transform: translateY(-6px);
       box-shadow: var(--shadow-md);
       border-color: rgba(22,58,99,0.18);
     }
+
     .video-thumb-wrap {
-      position: relative; aspect-ratio: 9/12; overflow: hidden;
-      background: var(--clr-dark);
+      position: relative;
+      aspect-ratio: 9/16;
+      overflow: hidden;
+      background: #000;
     }
-    .video-thumb-wrap img {
-      width: 100%; height: 100%; object-fit: cover;
-      opacity: 0.88; transition: transform 0.5s ease, opacity 0.3s ease;
-    }
-    .video-card:hover .video-thumb-wrap img { transform: scale(1.05); opacity: 1; }
-    .video-play-btn {
-      position: absolute; top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 56px; height: 56px; border-radius: 50%;
-      background: rgba(255,255,255,0.92);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.3rem; color: var(--clr-primary);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-      transition: var(--transition);
-    }
-    .video-card:hover .video-play-btn { background: var(--clr-accent); color: var(--clr-white); transform: translate(-50%, -50%) scale(1.08); }
-    .video-duration {
-      position: absolute; bottom: 10px; right: 10px;
-      font-size: 0.68rem; font-weight: 600; color: var(--clr-white);
-      background: rgba(10,29,51,0.6); padding: 3px 8px; border-radius: 6px;
-    }
-    .video-body { padding: 16px 18px; }
-    .video-name { font-weight: 700; font-size: 0.92rem; color: var(--clr-dark); }
-    .video-detail { font-size: 0.76rem; color: var(--clr-text-muted); margin-top: 2px; }
-    .video-thumb-wrap iframe {
+
+    .video-thumb-wrap video {
       width: 100%;
       height: 100%;
-      border: 0;
       display: block;
+      object-fit: cover;
+    }
+
+    .video-body {
+      padding: 16px 18px;
+    }
+
+    .video-name {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--clr-dark);
+    }
+
+    .video-detail {
+      font-size: 0.76rem;
+      color: var(--clr-text-muted);
+      margin-top: 2px;
     }
 
     /* ===== FAQ ===== */
@@ -1441,14 +1442,10 @@
       <!-- Testimonial 1 -->
       <div class="video-card reveal">
         <div class="video-thumb-wrap">
-          <iframe
-            src="https://drive.google.com/file/d/1Yy6Y5NyHKYmTXMYCWTJjBhDPipcEmrRN/preview"
-            width="100%"
-            height="100%"
-            allow="autoplay"
-            allowfullscreen
-            style="border:0;">
-          </iframe>
+          <video controls playsinline preload="metadata" poster="video-testi-1.jpg">
+            <source src="muskan.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         <div class="video-body">
@@ -1460,14 +1457,10 @@
       <!-- Testimonial 2 -->
       <div class="video-card reveal reveal-delay-1">
         <div class="video-thumb-wrap">
-          <iframe
-            src="https://drive.google.com/file/d/1MfgefbTEjWORdhmrJEiyav3OjW1LlxE7/preview"
-            width="100%"
-            height="100%"
-            allow="autoplay"
-            allowfullscreen
-            style="border:0;">
-          </iframe>
+          <video controls playsinline preload="metadata" poster="video-testi-2.jpg">
+            <source src="saif.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         <div class="video-body">
@@ -1479,18 +1472,14 @@
       <!-- Testimonial 3 -->
       <div class="video-card reveal reveal-delay-2">
         <div class="video-thumb-wrap">
-          <iframe
-            src="https://drive.google.com/file/d/1uCG0klijxGYwhiiLDjd6q8X8N7ABKzwM/preview"
-            width="100%"
-            height="100%"
-            allow="autoplay"
-            allowfullscreen
-            style="border:0;">
-          </iframe>
+          <video controls playsinline preload="metadata" poster="video-testi-3.jpg">
+            <source src="rukhshana.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         <div class="video-body">
-          <div class="video-name">Rukshana</div>
+          <div class="video-name">Rukhshana</div>
           <div class="video-detail">Smile Correction Patient, Srinagar</div>
         </div>
       </div>
@@ -1498,14 +1487,10 @@
       <!-- Testimonial 4 -->
       <div class="video-card reveal">
         <div class="video-thumb-wrap">
-          <iframe
-            src="https://drive.google.com/file/d/1tqglpKQFk01HiI4nrSNGtWyJvcrPFrZj/preview"
-            width="100%"
-            height="100%"
-            allow="autoplay"
-            allowfullscreen
-            style="border:0;">
-          </iframe>
+          <video controls playsinline preload="metadata" poster="video-testi-4.jpg">
+            <source src="shams.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         <div class="video-body">
@@ -1517,7 +1502,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===== FAQ ===== -->
 <section id="faq" class="section" aria-label="Frequently Asked Questions">
   <div class="container">
